@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn01"/>
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn02"
+        android:layout_alignParentRight="true"/>
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn03"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn04"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+    <!--오른쪽구석은 속성 두개 씀-->
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn05"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/b6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn06"
+        android:layout_centerVertical="true"/>
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn07"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn08"
+        android:layout_below="@id/b1"/>
+    <!--"@id/b1"에 +가 빠졌음. +id는 id를 새로 만든다는거..해도 에러는안남-->
+    <Button
+        android:id="@+id/b9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn09"
+        android:layout_toRightOf="@id/b3"
+        android:layout_alignParentBottom="true"/>
+
+    <!--그냥 centerparents하면 가운데인데, btn05랑 왼쪽에 정렬-->
+    <Button
+        android:id="@+id/b10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HelloWorld"
+        android:layout_above="@id/b5"
+        android:layout_alignLeft="@id/b5"/>
+
+    <!--relative는 원래 먼저 놓은애가 밑에 깔리는데, 단!!클릭되는애는 순서상관없이 위에 놓임-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"/>
+
+    <!--lineearlayout도 클릭안되는애라 얘가 imageView위에 쌓임-->
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="#FFFF0000"
+        android:layout_centerVertical="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aaa"
+            android:layout_gravity="right"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
